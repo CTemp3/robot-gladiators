@@ -12,7 +12,11 @@
 
 // NOTES
 
-// basic for loop template: for(var i = 0; i < x; i++)
+/* FOR LOOP REFERENCE
+for([initial expression]; [condition]; [increment expression]) {
+   statement
+}
+*/
 
 
 // initial prompts and player info
@@ -27,19 +31,12 @@ var playerMoney = 10;
 
 var enemyNames = ["Roberto", "Amy", "Trumble"];
 
-for(var i = 0; i < enemyNames.length; i++) {
-    console.log(enemyNames[i]);
-}
-
-// var enemyName = "Roberto";
-// var enemyHealth = 50;
-// var enemyAttack = 12;
-
-
+ var enemyHealth = 50;
+ var enemyAttack = 12;
 
 // making the fight function
 
-var fight = function() {
+var fight = function(enemyName) {
 
     var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.")
 
@@ -115,6 +112,10 @@ var fight = function() {
 
     }
 
+}
+
+for(var i = 0; i < enemyNames.length; i++) {
+    fight(enemyNames[i]);
 }
 
 fight();
